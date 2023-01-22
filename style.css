@@ -12,34 +12,6 @@ body {
   box-sizing: border-box;
 }
 
-nav {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid var(--border-color);
-  left: 0;
-  position: fixed;
-}
-
-nav > .nav-section {
-  padding: 3rem 2rem;
-  display: flex;
-  gap: 1rem;
-  border-left: 1px solid var(--border-color);
-  align-items: center;
-  justify-content: center;
-}
-
-#nav-home-section,
-#nav-progress-section,
-#nav-plan-section {
-  flex-basis: calc(100% / 3);
-}
-
-#nav-contact-section,
-#nav-about-section {
-  flex-grow: 1;
-}
-
 h1,
 h2,
 h3,
@@ -52,6 +24,27 @@ span {
 
 a {
   text-decoration: none;
+}
+
+nav {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  left: 0;
+  position: fixed;
+}
+
+nav > .nav-section {
+  padding: 2rem 2rem;
+  display: flex;
+  border-left: 1px solid var(--border-color);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+img {
+  
 }
 
 .class-section,
@@ -69,15 +62,26 @@ img {
 
 .footer-section {
   border-top: var(--border-color);
-  height: 100px;
 }
 
 footer {
-  height: 100px;
+  padding: 1rem 1rem;
   border-top: 1px solid var(--border-color);
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  nav > .nav-section {
+    padding: 1rem 1rem;
+    display: flex;
+    border-left: 1px solid var(--border-color);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
 }
