@@ -2,14 +2,71 @@
   --background-color: rgb(245, 235, 224);
   --border-color: rgb(38, 70, 83, 0.1);
   --text-color: black;
+  --article-width: 960px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
   background-color: var(--background-color);
 }
 
-* {
-  box-sizing: border-box;
+/*----------NAVIGATION---------- */
+nav {
+  background-color: var(--background-color);
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid var(--border-color);
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+/* selecting all div's with nav-section class */
+.nav-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+  width: 100%;
+  border-left: 1px solid var(--border-color);
+}
+
+/* transition animation for nav links*/
+.nav-section img {
+  width: 35px;
+  transition: transform 0.3s;
+}
+
+.nav-section img:hover {
+  transform: scale(1.5);
+}
+/*----------NAVIGATION---------- */
+
+/*----------MAIN---------- */
+main {
+  width: 80vw;
+  margin: auto;
+  margin-top: 9rem;
+}
+
+header {
+  text-align: center;
+  width: 80vw;
+}
+
+hr {
+  border: 1px solid var(--border-color);
+  max-width: 1000px;
+  margin: auto;
+}
+
+article {
+  max-width: var(--article-width);
+  margin: auto;
+  text-align: left;
 }
 
 h1,
@@ -26,45 +83,13 @@ a {
   text-decoration: none;
 }
 
-nav {
-  display: flex;
-  width: 100%;
-  border-bottom: 1px solid var(--border-color);
-  left: 0;
-  position: fixed;
-}
-
-nav > .nav-section {
-  padding: 2rem 2rem;
-  display: flex;
-  border-left: 1px solid var(--border-color);
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-
-img {
-  
-}
-
-.class-section,
-img {
-  width: 35px;
-}
-
-.nav-section > a > img {
-  transition: transform 0.2s;
-}
-
-.nav-section > a > img:hover {
-  transform: scale(1.5);
-}
-
+/*----------FOOTER---------- */
 .footer-section {
   border-top: var(--border-color);
 }
 
 footer {
+  background-color: var(--background-color);
   padding: 1rem 1rem;
   border-top: 1px solid var(--border-color);
   position: fixed;
@@ -74,14 +99,28 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-  nav > .nav-section {
-    padding: 1rem 1rem;
-    display: flex;
-    border-left: 1px solid var(--border-color);
-    align-items: center;
-    justify-content: center;
+/*----------FOR SMALLER SCREENS---------- */
+/* Changes with screen less than 412px (FOR PHONES) */
+@media (max-width: 412px) {
+  main {
+    width: 100%;
+    margin-top: 6rem;
+  }
+  header {
+    text-align: center;
     width: 100%;
   }
-  
+  main {
+    margin-bottom: 5rem;
+  }
+  .nav-section {
+    padding: 1rem 1rem;
+  }
+  .nav-section img {
+    width: 8vw;
+  }
+
+  footer {
+    padding: 0rem 0rem;
+  }
 }
