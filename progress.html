@@ -13,6 +13,7 @@
     />
 
     <!-- boilerplate -->
+
     <title>Fundraising - Homepage</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -50,16 +51,13 @@
       <hr />
       <article>
         <h2>Visualisation</h2>
-        <p>£3000</p>
-
         <div id="thermometer">
-          <div id="thermometer-goal"></div>
+          <p id="hot">£3000</p>
+          <p id="current-temp">33.33%</p>
+          <p id="current-raised">£1000</p>
+          <p id="cold">£000</p>
+          <div id="thermometer-current"></div>
         </div>
-        <p>£000</p>
-        <p>
-          We are <span id="percentage"></span> of the way there!!<br />That
-          means we have raised <span id="money"></span> out of £3000
-        </p>
       </article>
     </main>
 
@@ -69,27 +67,26 @@
       </div>
     </footer>
     <script>
-      // Get referrence to spans
-      var textPercentage = document.getElementById("percentage");
-      var textFundsGained = document.getElementById("money");
+      // Get referrence to <p> elements
+      var textCurrentTemp = document.getElementById("current-temp");
+      var textCurrentRaised = document.getElementById("current-raised");
+      // Get reference to thermometer-current element
+      var thermometerCurrent = document.getElementById("thermometer-current");
 
-      // Declare fundsGoal and fundsGained variables
+      // Declare the goal value and the current value
       var fundsGoal = 3000;
-      var fundsGained = 80;
+      var fundsGained = 1289.7;
+      // Calculate percentage of funds gained out of 3000
+      var percentageGained = (fundsGained / fundsGoal) * 100;
 
-      // Calculate percentage of fundsgained out of 3000
-      var percentagedone = (fundsGained / fundsGoal) * 100;
+      // Set height of thermometer-goal based on percentageGained
+      thermometerCurrent.style.height = percentageGained + "%";
 
-      // Get reference to thermometer-goal element
-      var thermometerGoal = document.getElementById("thermometer-goal");
-      // Set height of thermometer-goal based on percentage
-      thermometerGoal.style.height = percentagedone + "%";
-      var moneyMade = 300; // updated as needed
-      var percentageFilled = (moneyMade / 3000) * 100;
-
-      // Change text saying how much out of 3000 we have raised
-      percentage.innerHTML = percentagedone.toFixed(2) + "%";
-      money.innerHTML = "£" + fundsGained.toFixed(2);
+      textCurrentTemp.innerHTML = percentageGained.toFixed(2) + "%";
+      textCurrentRaised.innerHTML = "£" + fundsGained.toFixed(2);
+      var current = fundsGained / 10 - 20;
+      textCurrentRaised.style.bottom = current + "px";
+      textCurrentTemp.style.bottom = current + "px";
     </script>
   </body>
 </html>

@@ -3,6 +3,9 @@
   --border-color: rgb(38, 70, 83, 0.1);
   --text-color: black;
   --article-width: 960px;
+  /* for js */
+  --current-temp: 0px;
+  --current-raised: 0px;
 }
 
 * {
@@ -23,6 +26,14 @@ nav {
   left: 0;
   position: fixed;
 }
+
+
+.nav-section:focus {
+  outline: 0;
+}
+
+
+
 
 /* selecting all div's with nav-section class */
 .nav-section {
@@ -95,12 +106,36 @@ a {
   background-color: var(--background-color);
 }
 
-#thermometer-goal {
+#thermometer-current {
   width: 100%;
   height: ;
   background-color: gold;
   position: absolute;
   bottom: 0;
+}
+
+#hot {
+  position: absolute;
+  top: -30px;
+  left: 100px;
+}
+
+#current-temp {
+  position: absolute;
+  bottom: var(--current-temp);
+  left: -56px;
+}
+
+#current-raised {
+  position: absolute;
+  bottom: var(--current-raised);
+  left: 100px;
+}
+
+#cold {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
 }
 /*----------PROGRESS THERMOMETER---------- */
 
