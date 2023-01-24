@@ -43,15 +43,24 @@
     </nav>
 
     <main>
-        <header>
-            <h1>Our Progress So Far</h1>
-            <p>Last updated: <time datetime="2023-01-23 22:04">23/01/2023</time></p>
-        </header>
-        <hr>
-        <article>
-            <h2>Visualisation</h2>
-            <progress max="100" value="33"></progress>
-        </article>
+      <header>
+        <h1>Our Progress So Far</h1>
+        <p>Last updated: <time datetime="2023-01-23 22:04">23/01/2023</time></p>
+      </header>
+      <hr />
+      <article>
+        <h2>Visualisation</h2>
+        <p>£3000</p>
+
+        <div id="thermometer">
+          <div id="thermometer-goal"></div>
+        </div>
+        <p>£000</p>
+        <p>
+          We are <span id="percentage"></span> of the way there!!<br />That
+          means we have raised <span id="money"></span> out of £3000
+        </p>
+      </article>
     </main>
 
     <footer>
@@ -59,5 +68,28 @@
         <p>Author: Jake Evans</p>
       </div>
     </footer>
+    <script>
+      // Get referrence to spans
+      var textPercentage = document.getElementById("percentage");
+      var textFundsGained = document.getElementById("money");
+
+      // Declare fundsGoal and fundsGained variables
+      var fundsGoal = 3000;
+      var fundsGained = 80;
+
+      // Calculate percentage of fundsgained out of 3000
+      var percentagedone = (fundsGained / fundsGoal) * 100;
+
+      // Get reference to thermometer-goal element
+      var thermometerGoal = document.getElementById("thermometer-goal");
+      // Set height of thermometer-goal based on percentage
+      thermometerGoal.style.height = percentagedone + "%";
+      var moneyMade = 300; // updated as needed
+      var percentageFilled = (moneyMade / 3000) * 100;
+
+      // Change text saying how much out of 3000 we have raised
+      percentage.innerHTML = percentagedone.toFixed(2) + "%";
+      money.innerHTML = "£" + fundsGained.toFixed(2);
+    </script>
   </body>
 </html>
