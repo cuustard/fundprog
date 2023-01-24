@@ -53,8 +53,8 @@
         <h2>Visualisation</h2>
         <div id="thermometer">
           <p id="hot">£3000</p>
-          <p id="current-temp">33.33%</p>
-          <p id="current-raised">£1000</p>
+          <p id="current-temp"></p>
+          <p id="current-raised"></p>
           <p id="cold">£000</p>
           <div id="thermometer-current"></div>
         </div>
@@ -75,7 +75,7 @@
 
       // Declare the goal value and the current value
       var fundsGoal = 3000;
-      var fundsGained = 1200.60;
+      var fundsGained = 80;
       // Calculate percentage of funds gained out of 3000
       var percentageGained = (fundsGained / fundsGoal) * 100;
 
@@ -84,7 +84,7 @@
 
       textCurrentTemp.innerHTML = percentageGained.toFixed(2) + "%";
       textCurrentRaised.innerHTML = "£" + fundsGained.toFixed(2);
-      var current = fundsGained / 10 - 20;
+      var current = fundsGained / 10 - 27;
       textCurrentRaised.style.bottom = current + "px";
       textCurrentTemp.style.bottom = current + "px";
     </script>
