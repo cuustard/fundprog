@@ -52,7 +52,7 @@
       <article>
         <h2>Visualisation</h2>
         <div id="thermometer">
-          <p id="hot">£3000</p>
+          <p id="hot"></p>
           <p id="current-temp"></p>
           <p id="current-raised"></p>
           <p id="cold">£000</p>
@@ -67,26 +67,34 @@
       </div>
     </footer>
     <script>
-      // Get referrence to <p> elements
+      // Get reference to <p> describing max money
+      var hotValue = document.getElementById("hot");
+
+      // Get referrence to <p> elements who's position depends on js (% ______ £)
       var textCurrentTemp = document.getElementById("current-temp");
       var textCurrentRaised = document.getElementById("current-raised");
-      // Get reference to thermometer-current element
+
+      // Get reference to <div> that describes gold bar
       var thermometerCurrent = document.getElementById("thermometer-current");
 
-      // Declare the goal value and the current value
-      var fundsGoal = 3000;
-      var fundsGained = 80;
-      // Calculate percentage of funds gained out of 3000
-      var percentageGained = (fundsGained / fundsGoal) * 100;
+      // Declare the value of funds GOAL and the current funds Raised
+      var fundsGoal = 1500;
+      var fundsRaised = 80;
+      // Calculate percentage of funds gained out of 1500, and declare as variable fundsPercentageGained
+      var fundsPercentageGained = (fundsRaised / fundsGoal) * 100;
 
-      // Set height of thermometer-goal based on percentageGained
-      thermometerCurrent.style.height = percentageGained + "%";
+      // Set height of thermometer-goal based on fundsPercentageGained
+      thermometerCurrent.style.height = fundsPercentageGained + "%";
 
-      textCurrentTemp.innerHTML = percentageGained.toFixed(2) + "%";
-      textCurrentRaised.innerHTML = "£" + fundsGained.toFixed(2);
-      var current = fundsGained / 10 - 27;
+      // Change <p> describing percent and value raised
+      textCurrentTemp.innerHTML = fundsPercentageGained.toFixed(2) + "%";
+      textCurrentRaised.innerHTML = "£" + fundsRaised.toFixed(2);
+
+      var current = fundsRaised / 5 - 20;
       textCurrentRaised.style.bottom = current + "px";
       textCurrentTemp.style.bottom = current + "px";
+
+      hotValue.innerHTML = "£" + fundsGoal;
     </script>
   </body>
 </html>

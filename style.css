@@ -10,6 +10,9 @@
 
 * {
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: var(--text-color);
 }
 
 body {
@@ -78,16 +81,6 @@ article {
   max-width: var(--article-width);
   margin: auto;
   text-align: left;
-}
-
-h1,
-h2,
-h3,
-p,
-span {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  color: var(--text-color);
 }
 
 a {
@@ -179,4 +172,45 @@ footer {
   footer {
     padding: 0rem 0rem;
   }
+}
+
+/*---------- TABLES ----------*/
+/*----- basics -----*/
+table {
+  margin-top: 30px;
+  border-collapse: collapse;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+/*----- table headings -----*/
+th {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: left;
+  font-size: 18px;
+}
+
+/*----- table data (a cell) -----*/
+td {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+}
+
+
+
+
+/*----- table row hover animation -----*/
+tr {
+  transition: background-color 0.5s;
+}
+tr:hover {
+  background-color: #e8e8e8;
+}
+
+td {
+  transition: background-color 0.4s;
+}
+td:hover {
+  background-color: lightgrey;
 }
