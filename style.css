@@ -30,13 +30,9 @@ nav {
   position: fixed;
 }
 
-
 .nav-section:focus {
   outline: 0;
 }
-
-
-
 
 /* selecting all div's with nav-section class */
 .nav-section {
@@ -172,6 +168,14 @@ footer {
   footer {
     padding: 0rem 0rem;
   }
+
+  table tr th {
+    padding: 0px;
+  }
+
+  table tr td {
+    padding: 0px;
+  }
 }
 
 /*---------- TABLES ----------*/
@@ -196,9 +200,6 @@ td {
   padding: 8px;
   border: 1px solid var(--border-color);
 }
-
-
-
 
 /*----- table row hover animation -----*/
 tr {
