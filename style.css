@@ -1,8 +1,9 @@
 :root {
   --background-color: white;
-  --border-color: rgb(38, 70, 83, 0.1);
+  --border-color: rgb(38, 70, 83, 0.5);
   --text-color: black;
   --article-width: 960px;
+  --therm-radius: 0px 0px 20px 20px;
   /* for js */
   --current-temp: 0px;
   --current-raised: 0px;
@@ -87,6 +88,8 @@ a {
 
 /*----------PROGRESS THERMOMETER---------- */
 #thermometer {
+  border-radius: var(--therm-radius);
+  top: 50px;
   width: 100px;
   height: 300px;
   border: 2px solid var(--border-color);
@@ -97,6 +100,7 @@ a {
 }
 
 #thermometer-current {
+  border-radius: var(--therm-radius);
   width: 100%;
   height: ;
   background-color: gold;
@@ -106,8 +110,8 @@ a {
 
 #hot {
   position: absolute;
-  top: -30px;
-  left: 100px;
+  top: -35px;
+  left: 25px;
 }
 
 #current-temp {
@@ -124,8 +128,8 @@ a {
 
 #cold {
   position: absolute;
-  bottom: -35px;
-  left: 100px;
+  bottom: -40px;
+  left: 30px;
 }
 /*----------PROGRESS THERMOMETER---------- */
 
