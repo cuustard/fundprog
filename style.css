@@ -1,5 +1,5 @@
 :root {
-  --background-color: rgb(245, 235, 224);
+  --background-color: white;
   --border-color: rgb(38, 70, 83, 0.1);
   --text-color: black;
   --article-width: 960px;
@@ -21,7 +21,8 @@ body {
 
 /*----------NAVIGATION---------- */
 nav {
-  background-color: var(--background-color);
+  
+  background-color: #adcbeb;
   display: flex;
   width: 100%;
   border-bottom: 1px solid var(--border-color);
@@ -68,7 +69,7 @@ header {
 }
 
 hr {
-  border: 1px solid var(--border-color);
+  border: 1px solid #adcbeb;
   max-width: 1000px;
   margin: auto;
 }
@@ -134,7 +135,7 @@ a {
 }
 
 footer {
-  background-color: var(--background-color);
+  background-color: #adcbeb;
   padding: 1rem 1rem;
   border-top: 1px solid var(--border-color);
   position: fixed;
@@ -181,18 +182,20 @@ footer {
 /*---------- TABLES ----------*/
 /*----- basics -----*/
 table {
+  border-radius: 5px 5px 0px 0px;
   margin-top: 30px;
   border-collapse: collapse;
-  border-bottom: 1px solid var(--border-color);
   width: 100%;
 }
 
 /*----- table headings -----*/
 th {
+  background-color: #adcbeb;
   border: 1px solid var(--border-color);
   padding: 10px;
   text-align: left;
   font-size: 18px;
+  font-weight: 600;
 }
 
 /*----- table data (a cell) -----*/
