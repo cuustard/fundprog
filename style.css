@@ -22,7 +22,6 @@ body {
 
 /*----------NAVIGATION---------- */
 nav {
-  
   background-color: #adcbeb;
   display: flex;
   width: 100%;
@@ -62,6 +61,7 @@ main {
   width: 80vw;
   margin: auto;
   margin-top: 9rem;
+  margin-bottom: 10rem;
 }
 
 header {
@@ -79,6 +79,7 @@ article {
   max-width: var(--article-width);
   margin: auto;
   text-align: left;
+  margin-bottom: 100px;
 }
 
 a {
@@ -88,7 +89,7 @@ a {
 
 /*----------PROGRESS THERMOMETER---------- */
 #thermometer {
-  border-radius: var(--therm-radius);
+  border-radius: 0px 0px 20px 20px;
   top: 50px;
   width: 100px;
   height: 300px;
@@ -100,7 +101,7 @@ a {
 }
 
 #thermometer-current {
-  border-radius: var(--therm-radius);
+  border-radius: 0px 0px 18px 18px;
   width: 100%;
   height: ;
   background-color: gold;
@@ -175,11 +176,11 @@ footer {
   }
 
   table tr th {
-    padding: 0px;
+    padding: 4px;
   }
 
   table tr td {
-    padding: 0px;
+    padding: 3px;
   }
 }
 
@@ -187,9 +188,7 @@ footer {
 /*----- basics -----*/
 table {
   border-radius: 5px 5px 0px 0px;
-  margin-top: 30px;
   border-collapse: collapse;
-  width: 100%;
 }
 
 /*----- table headings -----*/
@@ -198,8 +197,7 @@ th {
   border: 1px solid var(--border-color);
   padding: 10px;
   text-align: left;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 17px;
 }
 
 /*----- table data (a cell) -----*/
@@ -221,4 +219,10 @@ td {
 }
 td:hover {
   background-color: lightgrey;
+}
+
+.date {
+  position: absolute;
+  left: 800px;
+  top: 705px;
 }
