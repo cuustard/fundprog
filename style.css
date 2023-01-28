@@ -89,6 +89,7 @@ a {
 
 /*----------PROGRESS THERMOMETER---------- */
 #thermometer {
+  z-index: -1;
   border-radius: 0px 0px 20px 20px;
   top: 50px;
   width: 100px;
@@ -134,21 +135,6 @@ a {
 }
 /*----------PROGRESS THERMOMETER---------- */
 
-/*----------FOOTER---------- */
-.footer-section {
-  border-top: var(--border-color);
-}
-
-footer {
-  background-color: #adcbeb;
-  padding: 1rem 1rem;
-  border-top: 1px solid var(--border-color);
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-}
 
 /*----------FOR SMALLER SCREENS---------- */
 /* Changes with screen less than 412px (FOR PHONES) */
@@ -225,4 +211,19 @@ td:hover {
   position: absolute;
   left: 800px;
   top: 705px;
+}
+
+details {
+  border: 1px solid var(--border-color);
+  border-radius: 10px 10px 0 0;
+  padding: 0.5em 0.5em 0;
+  margin-top: 10px;
+}
+
+summary {
+  border-radius: 10px 10px 0 0;
+  background-color: #adcbeb;
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
 }
