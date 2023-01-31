@@ -122,7 +122,7 @@ a {
 #current-temp {
   position: absolute;
   bottom: var(--current-temp);
-  left: -56px;
+  left: -59px;
 }
 
 #current-raised {
