@@ -27,7 +27,7 @@ p,
 td,
 details,
 td {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Noto Sans", sans-serif;
 }
 /*----------NAVIGATION---------- */
 nav {
@@ -85,9 +85,15 @@ article {
   background-color: var(--background-color);
 }
 
-a {
+a:link {
   text-decoration: none;
+  color: #0b70bd;
+  transition: color 0.5s;
 }
+a:hover {
+  color: rgb(238, 154, 66, 0.6);
+}
+
 /*----------MAIN---------- */
 
 /*----------PROGRESS THERMOMETER---------- */
