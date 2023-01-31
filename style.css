@@ -203,7 +203,7 @@ details p {
 /* Changes with screen less than 412px (FOR PHONES) */
 @media (max-width: 412px) {
   main {
-    width: 100%;
+    width: 90vw;
     margin-top: 6rem;
   }
   header {
